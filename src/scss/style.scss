@@ -1,0 +1,389 @@
+$font-stack: -apple-system, BlinkMacSystemFont,Roboto,'Open Sans','Helvetica Neue',sans-serif;
+
+@import '../../node_modules/slick-carousel/slick/slick.scss';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+}
+
+a{
+	color: #fff;
+	text-decoration: none;
+}
+
+body {
+  font-family: $font-stack;
+  font-weight: 400;
+  font-size: 18px;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+}
+
+.btn {
+   	padding: 10px 25px;
+   	display: inline-block;
+    border-radius: 20px;
+    font-family:  $font-stack;
+    font-size: 1.11em;
+    font-weight: bold;
+    font-style: normal;
+    text-align: center;
+    transition: all 0.5s ease;
+
+    &:hover{
+    	background: #70b023;
+    	color: #000;
+    }
+
+    &-green{
+  		background-color: #96c93d;
+  		max-width: 240px;
+	} 
+
+	&-yellow{
+  		background-color: #ffd800;
+  		color: #000;
+  		padding: 24px 53px;
+    	font-size: 2em;
+    	border-radius: 50px;
+    	position: relative;
+
+	}
+}
+
+.container {
+	max-width: 1530px;
+	width: 100%;
+	margin: auto;
+	position: relative;
+}
+
+header {
+
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+}
+.header-top {
+  position: absolute;
+  max-width: 1530px;
+  display: flex;
+  width: 100%;
+  height: 200px;
+  align-items: flex-end;
+  justify-content: space-between;
+  z-index: 10;	
+}
+
+.logo {
+	max-width: 200px;
+	text-align: center;
+}
+
+.logo-img {
+	   max-width: 90px;
+	   margin: auto;
+}
+
+.logo-label {
+    color: #fff;
+    text-transform: uppercase;
+    font-family: Roboto;
+    font-weight: 700;
+    margin: auto;
+
+}
+
+.info {
+    max-width: 570px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+	span {
+		font-size: 1.33em;
+
+	}
+
+	#lang {
+	    background: transparent;
+	    border: none;
+	    color: #fff;
+	    font-size: 1.33em;
+	}
+
+	option {
+		   color: black;
+	}
+	
+	.menu-bars{
+		background: url(/img/bars.png);
+		width: 42px;
+		height: 30px;
+		display: block;
+		position: relative;
+		z-index: 30;
+		
+	}
+}
+
+.onepage-pagination {
+    max-width: 1530px;
+    width: 100%;	
+    text-align: right;
+    top: 50%;
+    z-index: 15;	
+    margin: auto;
+    position: fixed;	
+    left: 0;
+    right: 0;
+	list-style: none;
+
+	li{
+		position: relative;
+		padding-right: 20px;
+		height: 20px;	
+
+		&:before {
+			content: "";
+		    width: 7px;
+		    height: 7px;
+		    border-radius: 50%;
+		    border: 2px solid #75736e;
+		    display: block;
+		    position: absolute;
+		    right: 0;
+		    top: 50%;
+		    margin-top: -5px;
+		}
+
+		a{
+			vertical-align: middle;	
+		}
+
+		a.active {
+			display: block;	
+
+			&:before {
+			    border: 3px solid #70b023;
+			    background: #fff;
+			}
+		}
+	}	
+}
+
+.menu-mobile {
+    position: fixed;
+    width: 100%;
+    top: 0;	
+    bottom: 0;	
+    left: 0;	
+    right: 0;	
+    text-align: center;
+    background: rgba(0,0,0,.8);
+    display: none;
+    z-index: 20;	
+}	
+
+.menu-list {
+    top: 50%;
+    position: absolute;
+    transform: translate(0, -25%);
+    left: 0;
+    right: 0
+}
+
+.menu-link {
+	font-size: 2em;
+	padding: 10px 0;
+	display: block;
+	&:hover{
+		background: #70b023;
+		color: #000;
+	}
+}
+
+.main{
+    max-width: 100%;
+
+    .city-bg{
+    	width: 100%;
+    	background: url(/img/city.jpg);
+    	background-repeat: no-repeat;
+    	background-position: center;
+    	background-size: cover;
+    }
+
+    .container{
+    	height: 100vh;
+	    display: flex;
+	    justify-content: center;
+	    flex-direction: column;
+	}
+
+    .title {
+      font-family: Roboto;
+      font-size: 5.5em;
+      font-weight: 100;
+      margin-top: 200px;	
+      padding-bottom: 100px;
+      position: relative;
+      margin-left: 40px;
+
+      &:before {
+	    content: "";
+	    width: 10px;
+	    height: 80px;
+	    background: #70b023;
+	    display: block;
+	    left: -40px;
+	    top: 10px;
+	    position: absolute;
+	    }
+	}
+
+    .ecology-bg{
+    	width: 100%;
+    	background: url(/img/ekologia.jpg);
+    	background-repeat: no-repeat;
+    	background-position: center;
+    	background-size: cover;
+
+    }
+
+    .advantages-list {
+	    display: flex;
+	    width: 100%;
+	    justify-content: space-between;
+	    flex-direction: row;
+	    list-style: none;
+	}
+
+	.advantages-item {
+	    max-width: 340px;
+
+	    svg{
+    		max-height: 100px;
+
+    		.cls-1 {
+	    		transition: all 0.5s ease;
+			}
+		}
+
+	    &:hover svg	.cls-1 {
+ 			fill: #70b023;
+ 		}
+	}
+
+	.item-label {
+	    text-align: center;
+	    margin: 15px auto 35px;
+	    font-size: 2em ;
+	    font-weight: 200;
+	}		
+
+    .item-icon {
+    	max-width: 100px;
+    	margin: auto;
+ 	}
+
+	.btn-group {
+ 		padding: 100px 0  0;
+	}
+
+    .complex-bg{
+    	width: 100%;
+    	background: url(/img/kompleks.jpg);
+    	background-repeat: no-repeat;
+    	background-position: center;
+    	background-size: cover;
+    }
+
+    .desc {
+    	margin-bottom: 50px;
+	}
+}
+
+ @media (max-width: 1346px) { 
+
+ 	body {
+  		font-size: 16px;
+  	}
+
+ 	 .header-top {
+ 	 	height: 130px;
+ 	 }
+ 	 
+ 	 .container{
+ 	 	max-width: 1170px;
+ 	 	min-height: 100vh;
+ 	 }
+
+ 	 .main .item-icon img {
+    	max-height: 70px;
+	}
+ 	
+ }	
+
+ @media (max-width: 768px) {
+
+ 	 body {
+  		font-size: 14px;
+  	}
+
+ 	.container{
+ 	 	max-width: 640px;
+
+ 	 }
+
+ 	 .main .title{
+ 	 	font-size: 3.5em;
+ 	 }
+
+ 	 .btn-yellow {
+        padding: 15px 25px;
+        font-size: 1.5em;	
+    }
+
+    .info{
+    	max-width: 70%;
+    }
+
+    .info span{
+ 	 	display: none;	
+ 	}
+
+ 	.main .title:before {
+ 		top: 5px;
+ 		height: 1em;	
+ 	}
+
+ 	.main ul.advantages-list {
+    	flex-direction: column;
+    }
+
+    .main li.advantages-item{
+    	margin: 20px auto;
+	}
+
+	.btn-group {
+		padding-bottom: 50px;	
+	}
+ }
+
+ @media (max-width: 320px) {
+
+ 	.container{
+ 	 	max-width: 300px;
+ 	}
+}
